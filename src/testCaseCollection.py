@@ -108,7 +108,7 @@ class testCaseCollection(unittest.TestCase):
 
     def test_deletePartition(self):
         # Start test case: delete the partition ...
-        result = deletePartition.start(self.dpmObj)
+        result = deletePartition.start(self.dpmObj, self.config.sectionDict["partition"])
         self.assertTrue(result['success'], result['reason'])
 
     def test_createFcpStorageGroup(self):

@@ -9,7 +9,7 @@ import sys
 from testCaseCollection import testCaseCollection
 from configFile import configFile
 
-class regression:
+class boundary:
     
     def __init__(self, testCaseList, configFileName):
         self.suite = unittest.TestSuite()
@@ -37,9 +37,9 @@ if __name__ == '__main__':
     # pass the config file
     config = configFile(location)
     config.loadConfig()
-    testCaseList = eval(config.sectionDict['testplans']['r43'])
+    testCaseList = eval(config.sectionDict['testplans']['0930'])
     configFileName = location.split('/')[-1].split('.')[0]
     
-    # create a regression object
-    regression = regression(testCaseList, configFileName)
-    regression.start()
+    # create a boundary object
+    boundary = boundary(testCaseList, configFileName)
+    boundary.start()
