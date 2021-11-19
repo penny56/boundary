@@ -37,7 +37,7 @@ if __name__ == '__main__':
     # pass the config file
     config = configFile(location)
     config.loadConfig()
-    testCaseList = eval(config.sectionDict['testplans']['0930'])
+    testCaseList = eval(config.sectionDict['testplans']['1119'])
     configFileName = location.split('/')[-1].split('.')[0]
     
     # create a boundary object

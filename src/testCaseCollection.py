@@ -29,6 +29,8 @@ from testCase_detachStorageGroup import detachStorageGroup
 from testCase_deletePartition import deletePartition
 from testCase_createStorageGroup import createStorageGroup
 from testCase_deleteStorageGroup import deleteStorageGroup
+from testCase_createHiperSocketAdapters import createHiperSocketAdapters
+from testCase_deleteHiperSocketAdapters import deleteHiperSocketAdapters
 
 
 class testCaseCollection(unittest.TestCase):
@@ -129,5 +131,15 @@ class testCaseCollection(unittest.TestCase):
     def test_deleteFiconStorageGroup(self):
         # Start test case: delete FICON storage group ...
         result = deleteStorageGroup.start(self.dpmObj, self.config.sectionDict["createficon"])
+        self.assertTrue(result['success'], result['reason'])
+        
+    def test_createHiperSocketAdapters(self):
+        # Start test case: add cnt hipersockets ...
+        result = createHiperSocketAdapters.start(self.dpmObj, self.config.sectionDict["createhipersocket"])
+        self.assertTrue(result['success'], result['reason'])
+
+    def test_deleteHiperSocketAdapters(self):
+        # Start test case: delete cnt hipersockets ...
+        result = deleteHiperSocketAdapters.start(self.dpmObj, self.config.sectionDict["createhipersocket"])
         self.assertTrue(result['success'], result['reason'])
     

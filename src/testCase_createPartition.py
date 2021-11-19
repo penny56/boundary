@@ -23,13 +23,7 @@ class createPartition():
         except Exception as e:
             result['reason'] = e
             return result
-        '''
-        for par in parList:
-            if par.name == parSection["par_name"]:
-                dpmObj.partition = par
-                result['reason'] = "The partition already exist in the CPC, create failed."
-                return result
-        '''
+
         # construct partition template
         partitionTempl = dict()
         
