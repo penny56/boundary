@@ -56,7 +56,7 @@ class startPartition():
             result['reason'] = e
             return result
         end = int(time.time())
-        print "starting time span is: " + str(end - start)
+        print ("starting time span is: " + str(end - start))
         
         time.sleep(10)
         result['success'] = True

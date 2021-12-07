@@ -16,7 +16,7 @@ class createHiperSocketAdapters():
 
         NUM = int(hiperSocketSection['cnt'])
         hsTempl = dict()
-        print '\n'
+        print ('\n')
         
         while NUM != 0:
             
@@ -24,7 +24,7 @@ class createHiperSocketAdapters():
             
             try:
                 new_adapter = dpmObj.cpc.adapters.create_hipersocket(hsTempl)
-                print "HiperSocket: " + hsTempl['name'] + " created!"
+                print ("HiperSocket: " + hsTempl['name'] + " created!")
             except (zhmcclient.HTTPError, zhmcclient.ParseError) as e:
                 result['reason'] = e
                 return result

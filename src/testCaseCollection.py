@@ -43,7 +43,7 @@ class testCaseCollection(unittest.TestCase):
         cls.connSection = cls.config.sectionDict["connection"]
         cls.dpmObj = dpm(cls.connSection)
         
-        print '||| HMC: ' + cls.connSection['hmc'] + ' SE: ' + cls.connSection['cpc'] + ' auto regression test verified at ' + str(datetime.datetime.now()).split('.')[0] + ' >>>'
+        print ('||| HMC: ' + cls.connSection['hmc'] + ' SE: ' + cls.connSection['cpc'] + ' auto regression test verified at ' + str(datetime.datetime.now()).split('.')[0] + ' >>>')
 
 
     @classmethod

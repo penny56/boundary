@@ -48,7 +48,7 @@ class stopPartition():
             result['reason'] = e
             return result
         end = int(time.time())
-        print "stopping time span is: " + str(end - start)
+        print ("stopping time span is: " + str(end - start))
         
         time.sleep(10)
         result['success'] = True

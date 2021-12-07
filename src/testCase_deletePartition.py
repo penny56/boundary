@@ -33,17 +33,18 @@ class deletePartition():
         except Exception as e:
             result['reason'] = e
             return result
-        print 
+
+        print ("\n")
         for partition in parList:
             if parSection["par_name_prefix"] in str(partition.name):
-                print "delete " + str(partition.name)
                 # Deem that all the partitions in stopped state
                 try:
                     partition.delete()
                 except zhmcclient.StatusTimeout as e:
                     result['reason'] = e
                     return result
+                print ("Partition " + str(partition.name) + " deleted!")
+                time.sleep(1)
 
-        time.sleep(1)
         result['success'] = True
         return result

@@ -56,7 +56,7 @@ class attachFCP():
                 # set the device number(s)
                 try:
                     vsrs = cpcActiveFCPSgDict[sgName].virtual_storage_resources.list()
-                except zhmcclient.HTTPError:
+                except zhmcclient.HTTPError as e:
                     result['reason'] = e
                     return result
                 

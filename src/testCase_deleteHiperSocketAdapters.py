@@ -13,8 +13,7 @@ class deleteHiperSocketAdapters():
     def start(cls, dpmObj, hiperSocketSection):
         
         result = {'success': False, 'reason': ''}
-        NUM = int(hiperSocketSection['cnt'])
-        print "\n"
+        print ("\n")
         
         for hsAdapter in dpmObj.cpc.adapters.list(filter_args={'type':'hipersockets'}) :
             if hiperSocketSection["hiso_name_prefix"] in str(hsAdapter.name):
@@ -23,7 +22,7 @@ class deleteHiperSocketAdapters():
                 except (zhmcclient.HTTPError, zhmcclient.ParseError) as e:
                     result['reason'] = e
                     return result
-                print "HiperSocket: " + str(hsAdapter.name) + " deleted."
+                print ("HiperSocket: " + str(hsAdapter.name) + " deleted!")
             time.sleep(1)
 
         result['success'] = True

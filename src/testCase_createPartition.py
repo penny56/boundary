@@ -15,18 +15,12 @@ class createPartition():
     def start(cls, dpmObj, parSection):
         
         result = {'success': False, 'reason': ''}
-        NUM = 3
         
-        # if the partition already exist in the CPC
-        try:
-            parList = dpmObj.cpc.partitions.list()
-        except Exception as e:
-            result['reason'] = e
-            return result
-
+        NUM = int(parSection['cnt'])
         # construct partition template
         partitionTempl = dict()
-        
+        print ("\n")
+
         while NUM != 0:
 
             partitionTempl["name"] = parSection["par_name_prefix"] + str(NUM)
@@ -46,17 +40,19 @@ class createPartition():
     
             try:
                 new_partition = dpmObj.cpc.partitions.create(partitionTempl)
+                print ("Partition: " + partitionTempl["name"] + " created!")
             except (zhmcclient.HTTPError, zhmcclient.ParseError) as e:
                 result['reason'] = e
                 return result
             time.sleep(1)
-            
+            ''' No need to verify here
             try:
                 parRet = dpmObj.cpc.partitions.find(name = partitionTempl["name"])
                 dpmObj.partition = parRet
             except zhmcclient.NotFound as e:
                 result['reason'] = e
                 return result
+            '''
             time.sleep(1)
             partitionTempl.clear()
             NUM -= 1

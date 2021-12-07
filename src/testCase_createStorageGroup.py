@@ -37,7 +37,7 @@ class createStorageGroup():
             sgTempl['storage-volumes'] = svsTempl
             sgTempl['email-to-addresses'] = ['noreply@ibm.com']
         except Exception as exc:
-            print "[EXCEPTION constructSgTemplate]", exc
+            print ("[EXCEPTION constructSgTemplate]", exc)
             raise exc
         
         try:
@@ -55,7 +55,7 @@ class createStorageGroup():
                     result['success'] = True
                     return result
         except Exception as exc:
-            print "[EXCEPTION list associated storage groups]", exc
+            print ("[EXCEPTION list associated storage groups]", exc)
             raise exc
 
         result['reason'] = "Could not find the storage group after creation."
@@ -85,6 +85,6 @@ class createStorageGroup():
     
                 svsTempl.append(svTempl)
         except Exception as exc:
-            print "[EXCEPTION constructSvTemplate]", exc
+            print ("[EXCEPTION constructSvTemplate]", exc)
             raise exc
         return svsTempl

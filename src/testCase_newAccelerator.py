@@ -48,7 +48,7 @@ class newAccelerator():
             # check the accelerator exists
             try:
                 dpmObj.partition.virtual_functions.find(name = acceDict["name"])
-            except zhmcclient.NotFound:
+            except zhmcclient.NotFound as e:
                 result['reason'] = e
                 return result
         time.sleep(1)
