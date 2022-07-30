@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "newvNics",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/newvNics.py",
+            "python": "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "createPartitions",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/createPartitions.py",
+            "python": "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "startPartition_tmp",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/startPartition_tmp.py",
+            "python": "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
