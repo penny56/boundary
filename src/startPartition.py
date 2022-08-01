@@ -62,10 +62,5 @@ try:
     print ("done")
 
 finally:
-    '''
-    print("Deleting partition ...")
-    if part != None:
-        part.delete()
-    '''
     print("Logging off ...")
     session.logoff()

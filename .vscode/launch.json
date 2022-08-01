@@ -23,10 +23,19 @@
             "justMyCode": true
         },
         {
-            "name": "startPartition_tmp",
+            "name": "startPartition",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/src/startPartition_tmp.py",
+            "program": "${workspaceFolder}/src/startPartition.py",
+            "python": "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "createHiSoAdapters",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/createHiSoAdapters.py",
             "python": "/Library/Developer/CommandLineTools/usr/bin/python3",
             "console": "integratedTerminal",
             "justMyCode": true
