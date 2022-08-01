@@ -21,7 +21,6 @@ userid = "apiuser"
 password = "apiuser"
 verify_cert = False
 part_props = {
-    'name': 'boundary_',
     'ifl-processors': 1,
     'initial-memory': 1024,
     'maximum-memory': 1024,
@@ -69,7 +68,7 @@ try:
                 format(part_props["name"], cpc.name, exc.__class__.__name__, exc))
             raise
         part_curr += 1
-    print ("Now we have " + str(part_max) + "partitions.")
+    print ("Now we have " + str(part_max) + " partitions.")
 
 finally:
     '''
